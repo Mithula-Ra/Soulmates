@@ -5,6 +5,7 @@ import {
     SidebarGroup,
     SidebarHeader,
   } from "@/components/ui/sidebar"
+import { Link } from "react-router-dom"
   
   export function SideBar() {
     return (
@@ -13,6 +14,11 @@ import {
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup />
+            <Link to="/Homecoming">
+              <button className="mx-4 bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition">
+                Go to Homecoming
+              </button>
+            </Link>
           <SidebarGroup />
         </SidebarContent>
         <SidebarFooter>

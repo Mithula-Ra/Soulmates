@@ -11,7 +11,6 @@ export const AppRoutes = () => {
     <Routes>
       <Route path="/Homecoming" element={<Homecoming><HCMain /></Homecoming>} />
       <Route path="/" element={<Home><div>Hello</div></Home>} />
-      <Route path="/test" element={<Home><div>test</div></Home>} />
     </Routes>
   );
 };
