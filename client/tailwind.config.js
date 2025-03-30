@@ -10,7 +10,7 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		fontFamily: {
-			Cute: ["Cedarville Cursive", "cursive"], // Custom cursive font
+			Cute: ["Rouge Script", "cursive"], // Custom cursive font
 		},
 		animation: {
 			fadeIn: 'fadeIn 1s ease-out',

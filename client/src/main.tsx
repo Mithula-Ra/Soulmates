@@ -3,12 +3,15 @@ import { createRoot } from 'react-dom/client'
 import './main.css'
 import { AppRoutes } from './AppRoutes'
 import { BrowserRouter } from 'react-router-dom'
+import { FirstLoginProvider } from './contexts/FirstLoginContext'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <FirstLoginProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </FirstLoginProvider>
   </StrictMode>
 )
