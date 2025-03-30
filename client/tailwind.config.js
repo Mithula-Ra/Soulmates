@@ -14,8 +14,14 @@ export default {
 		},
 		animation: {
 			fadeIn: 'fadeIn 1s ease-out',
+			float: 'float 4s ease-in-out infinite', 
 		},
 		keyframes: {
+			float:{
+			 '0%': { transform: 'translateY(6px)' },
+			 '50%': { transform: 'translateY(0px)' }, 
+			 '100%': { transform: 'translateY(6px)' }, 
+			},
 			fadeIn: {
 			  '0%': { opacity: '0', transform: 'translateY(50px)' },
           	'100%': { opacity: '1', transform: 'translateY(0)' }, 

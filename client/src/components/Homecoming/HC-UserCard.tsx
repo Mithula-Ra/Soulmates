@@ -20,9 +20,9 @@ type User = {
             <img 
                 src={`/Homecoming/${user.profilePic}`}
                 alt={user.name} 
-                className="w-32 h-32 rounded-full object-cover mb-4" 
+                className="w-32 h-32 rounded-full object-cover mb-4 animate-float" 
             />
-            <h3 className="text-lg font-semibold">{user.name}</h3>
+            <h3 className="text-xl font-semibold">{user.name}</h3>
         </div>
       </Card>
     );
