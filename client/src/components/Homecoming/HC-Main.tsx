@@ -5,13 +5,12 @@ import Day from "./HC-Day";
 type User = {
   id: number;
   name: string;
-  profilePic: string;
-  password: string;
+  profilePic: string
 };
 
 const users: User[] = [
-  { id: 1, name: "User One", profilePic: "user1.jpg", password: "password1" },
-  { id: 2, name: "User Two", profilePic: "user2.jpg", password: "password2" }
+  { id: 1, name: "Mithula", profilePic: "Mithula-HC.JPG"},
+  { id: 2, name: "Rania", profilePic: "Rania-HC.JPG"}
 ];
 
 const Main: React.FC = () => {

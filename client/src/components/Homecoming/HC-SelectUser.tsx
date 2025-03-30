@@ -1,8 +1,9 @@
+import UserCard from "./HC-UserCard";
+
 type User = {
     id: number;
     name: string;
     profilePic: string;
-    password: string;
   };
   
   type Props = {
@@ -12,14 +13,13 @@ type User = {
   
   const SelectUser: React.FC<Props> = ({ users, handleUserSelect }) => {
     return (
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-row items-center justify-center gap-4">
         {users.map((user) => (
           <button
             key={user.id}
             onClick={() => handleUserSelect(user)} // Calls the function passed as prop
-            className="bg-blue-500 text-white p-2 rounded"
-          >
-            {user.name} {/* Displays user name */}
+            className="rounded">
+                <UserCard user={user}/>
           </button>
         ))}
       </div>

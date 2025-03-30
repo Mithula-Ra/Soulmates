@@ -8,7 +8,7 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ children }) => {
     return (
-        <div className='w-full min-h-screen bg-white flex justify-center'>
+        <div className='w-full min-h-screen bg-white flex justify-center p-6'>
             <SidebarProvider>
              <SideBar/>
              <main>
