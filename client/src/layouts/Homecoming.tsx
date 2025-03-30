@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 interface HomecomingProps {
-    children: ReactNode;
+    children:  React.ReactNode;
 }
 
 const Homecoming : React.FC<HomecomingProps>  = ({ children }) => {
