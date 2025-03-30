@@ -14,7 +14,8 @@ export default {
 		},
 		animation: {
 			fadeIn: 'fadeIn 1s ease-out',
-			float: 'float 4s ease-in-out infinite', 
+			float: 'float 4s ease-in-out infinite',
+			bounce: "bounce 0.9s infinite ease-in-out",
 		},
 		keyframes: {
 			float:{
@@ -25,6 +26,11 @@ export default {
 			fadeIn: {
 			  '0%': { opacity: '0', transform: 'translateY(50px)' },
           	'100%': { opacity: '1', transform: 'translateY(0)' }, 
+			},
+			bounce: {
+			 "0%": { transform: "translateY(0)" },
+			 "50%": { transform: "translateY(15px)" },
+			 "100%": { transform: "translateY(0)" },
 			},
 		},
   		colors: {
