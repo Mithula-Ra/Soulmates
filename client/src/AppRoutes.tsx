@@ -1,14 +1,16 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Main from './layouts/Main';
+import Home from './layouts/Home';
 import Homecoming from './layouts/Homecoming';
+import HCMain from './components/Homecoming/HC-Main';
+
 
 
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/Homecoming" element={<Homecoming />} />
-      <Route path="/" element={<Main><div>Hello</div></Main>} />
+      <Route path="/Homecoming" element={<Homecoming><HCMain /></Homecoming>} />
+      <Route path="/" element={<Home><div>Hello</div></Home>} />
     </Routes>
   );
 };
