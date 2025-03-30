@@ -16,11 +16,11 @@ const users: User[] = [
 
 const Main: React.FC = () => {
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
-  const [error, setError] = useState<string>("");
+  // const [error, setError] = useState<string>("");
 
   const handleUserSelect = (user: User) => {
     setSelectedUser(user);
-    setError(""); // Ensure setError is defined
+    // setError(""); // Ensure setError is defined
   };
 
   return (
@@ -28,11 +28,12 @@ const Main: React.FC = () => {
       {!selectedUser ? (
         <div className="flex flex-col gap-4">
           <Day />
-          <SelectUser />
+          <SelectUser users={users} handleUserSelect={handleUserSelect} />
         </div>
       ) : (
         <div>
-          
+          <h2>Hello, {selectedUser.name}!</h2>
+          {/* You can now display other details or a login form here */}
         </div>
       )}
     </div>

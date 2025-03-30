@@ -1,5 +1,5 @@
-import React from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+// import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Home from './layouts/Home';
 import Homecoming from './layouts/Homecoming';
 import HCMain from './components/Homecoming/HC-Main';
