@@ -1,1 +1,6 @@
-dddd
+#ignore the node-modules
+server/node_modules
+client/node_modules
+
+#ignore the .env
+server/.env
