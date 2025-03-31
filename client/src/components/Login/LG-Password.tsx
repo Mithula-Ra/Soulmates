@@ -45,7 +45,7 @@ const Password = () => {
       </InputOTP>
 
       <div className="h-5 flex justify-center items-center">
-        {loading ? <Loading opacity={0.5} /> : <span className="text-red-400 font-semibold text-sm">{error}</span>}
+        {loading ? <Loading opacity={0.5} /> : <span className="text-red-400 text-sm">{error}</span>}
       </div>
     </div>
   );
