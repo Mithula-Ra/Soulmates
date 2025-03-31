@@ -15,6 +15,10 @@ const Password = () => {
 
   function handleChange(newValue: string) {
     setValue(newValue);
+
+    if (newValue.length < 4) {
+      setError("");
+    }
     
     if (newValue.length === 4) {
       setLoading(true);
@@ -35,7 +39,7 @@ const Password = () => {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="backdrop-blur-lg border-[2px] p-1 rounded-lg border-pink-200">
+      <div className="backdrop-blur-lg border-[2px] dark:border-[1px] p-1 rounded-lg border-pink-200 dark:border-gray-200 dark:border-opacity-50">
         <InputOTP maxLength={4} value={value} onChange={handleChange}>
           <InputOTPGroup>
             <InputOTPSlot index={0} />
@@ -47,7 +51,7 @@ const Password = () => {
       </div>
 
       <div className="h-5 flex justify-center items-center">
-        {loading ? <Loading opacity={0.5} /> : <span className="text-red-400 text-sm">{error}</span>}
+        {loading ? <Loading opacity={0.7} /> : <span className="text-red-400 text-opacity-80 text-sm animate-shake">{error}</span>}
       </div>
     </div>
   );

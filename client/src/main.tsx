@@ -4,14 +4,17 @@ import './main.css'
 import { AppRoutes } from './AppRoutes'
 import { BrowserRouter } from 'react-router-dom'
 import { FirstLoginProvider } from './contexts/FirstLoginContext'
+import { ThemeProvider } from './contexts/Themeprovider'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <FirstLoginProvider>
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </ThemeProvider>
     </FirstLoginProvider>
   </StrictMode>
 )

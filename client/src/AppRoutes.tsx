@@ -4,7 +4,7 @@ import Home from './layouts/Home';
 import Homecoming from './layouts/Homecoming';
 import HCMain from './components/Homecoming/HC-Main';
 import Login from './layouts/Login';
-import LGMain from './components/Login/LG-Main';
+import LGMain from './components/Login/LG-MainB';
 
 
 

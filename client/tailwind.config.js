@@ -16,6 +16,8 @@ export default {
 			fadeIn: 'fadeIn 1s ease-out',
 			float: 'float 4s ease-in-out infinite',
 			bounce: "bounce 0.9s infinite ease-in-out",
+			pulse: "pulse 800ms ease-out",
+			shake: 'shake 0.3s ease-in-out',
 		},
 		keyframes: {
 			float:{
@@ -23,6 +25,10 @@ export default {
 			 '50%': { transform: 'translateY(0px)' }, 
 			 '100%': { transform: 'translateY(6px)' }, 
 			},
+			pulse:{
+				'0%': {opacity: '0.3',transform: 'scale(0.8)' },
+				'100%': { transform: 'scale(1.5)',opacity:'0' }, 
+			   },
 			fadeIn: {
 			  '0%': { opacity: '0', transform: 'translateY(50px)' },
           	'100%': { opacity: '1', transform: 'translateY(0)' }, 
@@ -32,6 +38,13 @@ export default {
 			 "50%": { transform: "translateY(15px)" },
 			 "100%": { transform: "translateY(0)" },
 			},
+			shake: {
+				'0%': { transform: 'translateX(0)' },
+				'25%': { transform: 'translateX(-4px)' },
+				'50%': { transform: 'translateX(4px)' },
+				'75%': { transform: 'translateX(-4px)' },
+				'100%': { transform: 'translateX(0)' },
+			  },
 		},
   		colors: {
   			'purpleX-200': '#E8D5FF',
