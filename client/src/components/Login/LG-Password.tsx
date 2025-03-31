@@ -35,14 +35,16 @@ const Password = () => {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <InputOTP maxLength={4} value={value} onChange={handleChange}>
-        <InputOTPGroup>
-          <InputOTPSlot index={0} />
-          <InputOTPSlot index={1} />
-          <InputOTPSlot index={2} />
-          <InputOTPSlot index={3} />
-        </InputOTPGroup>
-      </InputOTP>
+      <div className="backdrop-blur-lg border-[2px] p-1 rounded-lg border-pink-200">
+        <InputOTP maxLength={4} value={value} onChange={handleChange}>
+          <InputOTPGroup>
+            <InputOTPSlot index={0} />
+            <InputOTPSlot index={1} />
+            <InputOTPSlot index={2} />
+            <InputOTPSlot index={3} />
+          </InputOTPGroup>
+        </InputOTP>
+      </div>
 
       <div className="h-5 flex justify-center items-center">
         {loading ? <Loading opacity={0.5} /> : <span className="text-red-400 text-sm">{error}</span>}
