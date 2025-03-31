@@ -1,8 +1,6 @@
-import { useUser } from "@/contexts/UserContext";
 import SelectUser from "./LG-SelectUser";
 
 const ChooseUser = () => {
-  const { users } = useUser()
 
   return (
     <div className="flex flex-col min-w-[300px] min-h-[50px] items-center gap-6 p-6 rounded-2xl shadow-lg bg-white dark:bg-black">
