@@ -6,8 +6,12 @@ import {
     SidebarHeader,
   } from "@/components/ui/sidebar"
 import { Link } from "react-router-dom"
+import { useUser } from "@/contexts/UserContext"
+import { Button } from "../ui/button";
   
   export function SideBar() {
+    const { user, setUser } = useUser();
+
     return (
       <Sidebar>
         <SidebarHeader>
@@ -25,6 +29,14 @@ import { Link } from "react-router-dom"
               </button>
             </Link>
           <SidebarGroup />
+          <SidebarGroup>
+              <div className="py-6 text-black dark:text-white">
+                {user?.name}
+              </div>
+              <Button onClick={() => setUser(null)}>Reset User</Button>
+
+
+          </SidebarGroup>
         </SidebarContent>
         <SidebarFooter>
         </SidebarFooter>

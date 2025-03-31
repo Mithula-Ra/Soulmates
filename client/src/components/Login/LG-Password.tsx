@@ -6,11 +6,14 @@ import {
 import React from "react";
 import Loading from "../commons/Loading";
 import { useNavigate } from "react-router-dom";
+import { useUser } from "@/contexts/UserContext"
+
 
 const Password = () => {
   const [value, setValue] = React.useState("");  
   const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState("");
+  const [error, setError] = React.useState("");  
+  const { user } = useUser();
   const navigate = useNavigate();
 
   function handleChange(newValue: string) {
@@ -29,7 +32,11 @@ const Password = () => {
         
         if (newValue === "2418") {
           console.log("Correct Passcode");
-          navigate("/");
+          if (user) {
+            navigate("/");
+          } else {
+            navigate("/login/user");
+          }
         } else {
           setError("Wrong Passcode");
         }

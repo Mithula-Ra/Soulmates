@@ -1,9 +1,9 @@
 import Password from "./LG-Password";
 
-const Main = () => {
+const MainB = () => {
   return (
-    <div className="flex flex-col items-center gap-6 p-6 rounded-2xl shadow-lg bg-white">
-      <p className="text-gray-700 text-center text-2xl font-medium">
+    <div className="flex flex-col items-center min-w-[300px] min-h-[400px] gap-6 p-6 rounded-2xl shadow-lg bg-white dark:bg-black">
+      <p className="text-gray-700 dark:text-gray-300 text-center font-light text-2xl">
         Stoppp!
       </p>
       <div className="w-56 h-40 max-w-xs">
@@ -13,7 +13,7 @@ const Main = () => {
           className="w-full h-full object-cover rounded-lg"
         />
       </div>
-      <p className="text-gray-600 text-center text-lg font-medium max-w-[320px]">
+      <p className="text-gray-600 dark:text-gray-400 font-light text-center text-lg max-w-[320px]">
         Before we continue, prove you are half of us… What’s our secret code?
       </p>
       <Password />
@@ -21,4 +21,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainB;
