@@ -18,7 +18,7 @@ const SelectUser = () => {
     }
   }, [setUser, navigate]);
 
-  const handleUserSelect = (user: { id: number; name: string }) => {
+  const handleUserSelect = (user: { id: number; name: string; secondName: string; initials:string }) => {
     setUser(user);
 
     if (saveChoice) {

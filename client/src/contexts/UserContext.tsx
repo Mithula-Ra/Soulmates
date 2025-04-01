@@ -2,7 +2,9 @@ import { createContext, useState, ReactNode, useContext } from "react";
 
 interface User {
   id: number;
-  name: string;
+  name: string;  
+  secondName: string;
+  initials: string;
 }
 
 interface UserContextType {
@@ -20,8 +22,8 @@ interface UserProviderProps {
 
 // Predefined Users
 const users: User[] = [
-  { id: 0, name: "Mithula" },
-  { id: 1, name: "Rania" },
+  { id: 0, name: "Mithula",secondName: "Chanthuka", initials: "MI" },
+  { id: 1, name: "Rania",secondName: "Badouchi", initials: "RA"},
 ];
 
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {

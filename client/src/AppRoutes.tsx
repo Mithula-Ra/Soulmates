@@ -15,7 +15,13 @@ export const AppRoutes = () => {
       <Route path="/login" element={<Login><LGMain /></Login>} />
       <Route path="/login/user" element={<Login><ChooseUser /></Login>} />
       <Route path="/Homecoming" element={<Homecoming><HCMain /></Homecoming>} />
-      <Route path="/" element={<Home><div>Hello</div></Home>} />
+      <Route path="/" element={<Home />}>
+        <Route index element={<div>Home</div>} />
+        <Route path="games" element={<div>Games</div>} />
+        <Route path="time" element={<div>time</div>} />
+        <Route path="tasks" element={<div>tasks</div>} />
+        <Route path="settings" element={<div>settings</div>} />
+      </Route>
     </Routes>
   );
 };

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { useTheme } from "@/contexts/Themeprovider"
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();  
 
   // Toggle between light and dark modes
   const toggleTheme = () => {
