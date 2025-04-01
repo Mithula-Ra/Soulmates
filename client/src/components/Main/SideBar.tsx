@@ -7,6 +7,7 @@ import {
   SidebarHeader,
 } from "@/components/ui/sidebar"
 import SideBarLink from "./SideBarLink"
+import SideBarLinkS from "./SideBarLinkS"
 
 export function SideBar() {
 
@@ -20,10 +21,10 @@ export function SideBar() {
               
               <SidebarGroup>
                <SidebarGroupLabel>Our Zone</SidebarGroupLabel>
-               <SideBarLink Label="Home" url="/"/>
-               <SideBarLink Label="Games" url="/games"/>
-               <SideBarLink Label="Time" url="/time"/>
-               <SideBarLink Label="Tasks" url="/tasks"/>
+               <SideBarLinkS Label="Home" url="/" img="home.webp"/>
+               <SideBarLink Label="Games" url="/games" />
+               <SideBarLink Label="Time" url="/time" />
+               <SideBarLink Label="Calender" url="/calender"/>
               </SidebarGroup>
               
               <SidebarGroup>

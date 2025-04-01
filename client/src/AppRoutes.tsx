@@ -6,6 +6,8 @@ import HCMain from './components/Homecoming/HC-Main';
 import Login from './layouts/Login';
 import LGMain from './components/Login/LG-Main';
 import ChooseUser from './components/Login/LG-ChooseUser';
+import SubHome from './components/Main/Home';
+import Games from './components/Main/Games';
 
 
 
@@ -16,10 +18,10 @@ export const AppRoutes = () => {
       <Route path="/login/user" element={<Login><ChooseUser /></Login>} />
       <Route path="/Homecoming" element={<Homecoming><HCMain /></Homecoming>} />
       <Route path="/" element={<Home />}>
-        <Route index element={<div>Home</div>} />
-        <Route path="games" element={<div>Games</div>} />
+        <Route index element={<SubHome />} />
+        <Route path="games" element={<Games />} />
         <Route path="time" element={<div>time</div>} />
-        <Route path="tasks" element={<div>tasks</div>} />
+        <Route path="calender" element={<div>calender</div>} />
         <Route path="settings" element={<div>settings</div>} />
       </Route>
     </Routes>

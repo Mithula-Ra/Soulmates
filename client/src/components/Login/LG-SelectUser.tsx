@@ -31,8 +31,8 @@ const SelectUser = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-row items-center justify-center gap-4 pb-8">
+    <div className="flex flex-col items-center justify-center gap-8">
+      <div className="flex flex-row items-center justify-center gap-4">
         {users.map((user) => (
           <button
             key={user.id}
@@ -42,8 +42,6 @@ const SelectUser = () => {
             <UserCard user={user} />
           </button>
         ))}
-        <div>
-        </div>
       </div>
       <div className="items-top flex space-x-2 px-2">
       <Checkbox
@@ -54,9 +52,9 @@ const SelectUser = () => {
           <div className="grid gap-1.5 leading-none">
             <label
               htmlFor="terms1"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className="text-sm font-normal leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-              Save Choice
+              Don't ask me again
             </label>
           </div>
         </div>

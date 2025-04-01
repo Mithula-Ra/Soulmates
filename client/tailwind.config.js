@@ -45,6 +45,10 @@ export default {
 				'75%': { transform: 'translateX(-4px)' },
 				'100%': { transform: 'translateX(0)' },
 			  },
+			   meteor: {
+				'10%' : { opacity: '1' },
+				'80%' : { left: '10%', top: '90px', opacity: '0' }
+			  }
 		},
   		colors: {
   			'purpleX-200': '#E8D5FF',

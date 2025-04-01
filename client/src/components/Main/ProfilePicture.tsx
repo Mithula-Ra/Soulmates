@@ -6,7 +6,7 @@ const ProfilePicture = () => {
 
   return(
     <Avatar>
-        <AvatarImage src={`/Profile/${user? user.id : "fallback"}.png`} />
+        <AvatarImage src={`/Profile/${user? user.id : "fallback"}.webp`} />
         <AvatarFallback>{user? user.initials : "MR"}</AvatarFallback>
     </Avatar>
   )
