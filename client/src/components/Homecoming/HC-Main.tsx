@@ -29,7 +29,7 @@ const Main: React.FC = () => {
         <div className="flex flex-col gap-4">
           <Day />
           <SelectUser users={users} handleUserSelect={handleUserSelect} />
-          <Flowers imageSrc="/Homecoming/rosse.webp"></Flowers>
+          <Flowers imageSrc="/Homecoming/rose.webp"></Flowers>
         </div>
       ) : (
         <div className="h-full w-full">
