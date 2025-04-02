@@ -1,10 +1,11 @@
 interface FlowersProps {
     emoji?: string; // Allows custom emoji (default: ❤️)
+    imageSrc?: string; // Allows custom image instead of emoji
   }
   
-  const Flowers: React.FC<FlowersProps> = ({ emoji = "❤️" }) => {
+  const Flowers: React.FC<FlowersProps> = ({ emoji = "❤️", imageSrc }) => {
     return (
-      <div className="absolute inset-0 overflow-hidden z-10">
+      <div className="absolute inset-0 overflow-hidden">
         <ul className="relative h-full w-full list-none">
           {Array.from({ length: 100 }).map((_, index) => (
             <li
@@ -14,12 +15,20 @@ interface FlowersProps {
               }`}
               style={{
                 top: "-10%", // Start above the screen
-                left: `${Math.random() * 100}%`, // Random horizontal start
-                animationDuration: `${Math.random() * 4 + 2}s`, // Random fall speed (2s to 6s)
+                left: `${Math.random() * 90}%`, // Random horizontal start
+                animationDuration: `${Math.random() * 3 + 2}s`, // Random fall speed (2s to 6s)
                 animationDelay: `${index * 100}ms`, // Fixing the delay issue
               }}
             >
-              {index % 2 == 0  ? emoji : ""}
+              {index % 2 == 0 ? (
+                imageSrc ? (
+                  <img src={imageSrc} alt="❤️" className="w-12 h-12 text-xl" />
+                ) : (
+                  emoji
+                )
+              ) : (
+                ""
+              )}
             </li>
           ))}
         </ul>
