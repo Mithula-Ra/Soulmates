@@ -20,6 +20,7 @@ export default {
 			shake: 'shake 0.3s ease-in-out',
 			"Lighten-1": "Lighten 4s ease-in",
 			"Lighten-2": "Lighten 3s ease-in",
+			falling: 'falling ease-in',
 		},
 		keyframes: {
 			float:{
@@ -27,6 +28,10 @@ export default {
 			 '50%': { transform: 'translateY(0px)' }, 
 			 '100%': { transform: 'translateY(6px)' }, 
 			},
+			falling:{
+				'0%': { transform: 'translateY(0px)', opacity: 1 },
+				'100%': { transform: 'translateY(600px)', opacity: 0 }, 
+			   },
 			pulse:{
 				'0%': {opacity: '0.3',transform: 'scale(0.8)' },
 				'100%': { transform: 'scale(1.5)',opacity:'0' }, 

@@ -13,7 +13,7 @@ type User = {
   
   const SelectUser: React.FC<Props> = ({ users, handleUserSelect }) => {
     return (
-      <div className="flex flex-row items-center justify-center gap-4 pb-8">
+      <div className="flex flex-row items-center justify-center gap-4 pb-8 z-20">
         {users.map((user) => (
           <button
             key={user.id}

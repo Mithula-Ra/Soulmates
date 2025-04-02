@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SelectUser from "./HC-SelectUser";
 import Day from "./HC-Day";
+import Flowers from "./Flowers";
 
 type User = {
   id: number;
@@ -28,12 +29,13 @@ const Main: React.FC = () => {
         <div className="flex flex-col gap-4">
           <Day />
           <SelectUser users={users} handleUserSelect={handleUserSelect} />
+          <Flowers></Flowers>
         </div>
       ) : (
-        <div>
+        <div className="h-full w-full">
           <h2>Hello, {selectedUser.name}!</h2>
-          {/* You can now display other details or a login form here */}
         </div>
+        
       )}
     </div>
   );

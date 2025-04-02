@@ -8,7 +8,7 @@ import { useFirstLogin } from "@/contexts/FirstLoginContext";
   
 
     return (
-      <div className="flex flex-col items-center gap-0 max-w-fit px-4 font-Cute">
+      <div className="flex flex-col items-center gap-0 max-w-fit px-4 font-Cute z-30">
         <div className="text-gray-600 text-6xl ">
           {formattedDate}
         </div>
