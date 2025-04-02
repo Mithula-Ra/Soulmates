@@ -6,43 +6,49 @@ import {
 import React from "react";
 import Loading from "../commons/Loading";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "@/contexts/UserContext"
-
+import axios from "axios";
 
 const Password = () => {
   const [value, setValue] = React.useState("");  
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState("");  
-  const { user } = useUser();
   const navigate = useNavigate();
 
-  function handleChange(newValue: string) {
+  // Handling OTP input change
+  const handleChange = async (newValue: string) => {
     setValue(newValue);
 
     if (newValue.length < 4) {
       setError("");
     }
-    
+
     if (newValue.length === 4) {
       setLoading(true);
-      setError("");
+      setError(""); 
 
-      setTimeout(() => {   
-        setLoading(false);
-        
-        if (newValue === "2418") {
-          console.log("Correct Passcode");
-          if (user) {
-            navigate("/");
-          } else {
-            navigate("/login/user");
-          }
+      try {
+        const response = await axios.post("https://soulmates-d20s.onrender.com/user/login", {
+            password: newValue,
+        });
+
+        localStorage.setItem('authToken', response.data.token); // Store JWT token
+        console.log("Login successful:", response.data);
+        setError(''); 
+
+        const storedUser = localStorage.getItem("selectedUser");
+        if (storedUser) {
+            navigate("/");  // Navigate to the home page if user is logged in
         } else {
-          setError("Wrong Passcode");
+            navigate("/login/user");  // Navigate to the login page if no user
         }
-      }, 2000);
+      } catch (err: any) {
+        setError("Wrong Passcode");
+        console.error("Error during login:", err.response ? err.response.data : err.message);
+      } finally {
+        setLoading(false);  // Set loading state to false after API call
+      }
     }
-  }
+  };
 
   return (
     <div className="flex flex-col items-center gap-4">

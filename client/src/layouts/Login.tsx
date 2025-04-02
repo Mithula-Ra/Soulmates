@@ -16,7 +16,7 @@ const Login: React.FC<LoginProps> = ({ children }) => {
         <div className={`absolute top-4 right-4 z-30`}>
           <ModeToggle />
         </div>
-        <div className={`absolute top-4 right-4 h-9 w-9 rounded-full bg-purple-400 opacity-0 z-20 ${isFirstLogin ? "animate-pulse" : ""}`}></div>
+        <div className={`absolute top-4 right-4 h-9 w-9 rounded-full bg-purple-400 opacity-0 z-20 ${isFirstLogin ? "animate-pulse delay-400" : ""}`}></div>
       </div>
       <div className="w-full flex flex-col justify-start gap-4 items-center max-w-sm md:max-w-3xl">
         {children}

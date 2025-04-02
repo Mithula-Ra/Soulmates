@@ -23,7 +23,7 @@ const SideBarLink: React.FC<SideBarLinkProps> = ({ Label, url = '/'}) => {
             to={url}
             className={({ isActive }) =>
                 `block px-4 py-2 rounded-lg transition duration-200 my-1 ${
-                    isActive ? "bg-purple-700 text-white font-semibold" : "bg-muted hover:text-white hover:bg-purple-400"
+                    isActive ? "bg-purple-700 text-white font-semibold" : "dark:bg-transparent bg-muted border-[0] dark:border dark:border-gray-50/20 hover:text-white hover:bg-purple-400 dark:hover:bg-muted "
                 }`}
             onClick={handleClick}
         >

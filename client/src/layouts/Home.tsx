@@ -27,11 +27,11 @@ const Home: React.FC<HomeProps> = ({ children }) => {
         <div className="w-full min-h-screen bg-white dark:bg-black flex flex-col">
             <Header />
 
-            <div className="flex flex-1 p-6">
+            <div className="flex flex-1 py-6 px-4 md:px-6">
                 <SidebarProvider>
                     <SideBar />
                     <main className="flex-1">
-                        <SidebarTrigger />
+                        <SidebarTrigger className='mt-2' />
                         {children ?? <Outlet />} {/* Render children if passed, else use Outlet */}
                     </main>
                 </SidebarProvider>
