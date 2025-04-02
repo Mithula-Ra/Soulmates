@@ -23,8 +23,8 @@ const SideBarLink: React.FC<SideBarLinkProps> = ({ Label, url = '/', img }) => {
         <NavLink 
             to={url}
             className={({ isActive }) =>
-                `w-full flex flex-col items-center gap-0 drop-shadow-md bg-muted rounded-lg my-1 p-0 ${
-                    isActive ? "bg-purple-700 text-white font-semibold" : "dark:bg-transparent bg-muted border-[0] dark:border dark:border-gray-50/20 hover:text-white hover:bg-purple-400 dark:hover:bg-muted"
+                `w-full flex flex-col items-center gap-0 drop-shadow-md bg-muted rounded-lg my-2 opacity-80 p-0 ${
+                    isActive ? "bg-purple-700 text-white font-semibold" : "dark:bg-gray-500 bg-muted hover:text-white hover:bg-purple-400 dark:hover:bg-muted"
                 }`}
             onClick={handleClick}
         >

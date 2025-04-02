@@ -10,12 +10,11 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ url, title, subTitle, children }) => {
     return (
         <div className="relative flex flex-col rounded-lg justify-between w-full min-h-[200px] bg-purple-50 p-2">
-            <div 
-                className="absolute rounded-lg inset-0 bg-cover bg-center bg-purple-50 " 
-                style={{
-                    backgroundImage: `url(${url})`,
-                }}
-            ></div>
+            <img 
+                src={url} 
+                alt="Game Image" 
+                className="absolute inset-0 w-full h-full object-cover rounded-lg" 
+            />
             <div 
                  className="absolute rounded-lg inset-0 bg-gradient-to-r from-transparent to-black opacity-90"
             ></div>

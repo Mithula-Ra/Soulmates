@@ -14,7 +14,7 @@ const Password = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");  
   const navigate = useNavigate();
-  const [ specialDay ] = useState(true);
+  const [ specialDay ] = useState(false);
 
   // Handling OTP input change
   const handleChange = async (newValue: string) => {

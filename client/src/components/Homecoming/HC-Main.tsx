@@ -34,6 +34,9 @@ const Main: React.FC = () => {
       ) : (
         <div className="h-full w-full">
           <h2>Hello, {selectedUser.name}!</h2>
+          <div>
+            <img src="/Homecoming/1234.png" className="w-[350px] h-full object-cover " alt="" />
+          </div>
         </div>
         
       )}

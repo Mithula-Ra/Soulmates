@@ -13,27 +13,27 @@ export function SideBar() {
 
   return (
       <Sidebar>
-          <SidebarHeader>
-              <h2 className="text-xl font-semibold text-white">Menu</h2>
+          <SidebarHeader className="dark:bg-black">
+              <h2 className="text-xl font-light text-gray-400 min-h-12 p-2">Soulmates </h2>
           </SidebarHeader>
 
-          <SidebarContent>
+          <SidebarContent className="dark:bg-black">
               
               <SidebarGroup>
                <SidebarGroupLabel>Our Zone</SidebarGroupLabel>
                <SideBarLinkS Label="Home" url="/" img="home.webp"/>
-               <SideBarLink Label="Games" url="/games" />
+               <SideBarLinkS Label="Games" url="/games" img="games.webp"/>
                <SideBarLink Label="Time" url="/time" />
                <SideBarLink Label="Calender" url="/calender"/>
               </SidebarGroup>
               
-              <SidebarGroup>
+              <SidebarGroup >
                <SidebarGroupLabel>Settings & Appearance</SidebarGroupLabel>
                <SideBarLink Label="Settings" url="/settings"/>
               </SidebarGroup>
           </SidebarContent>
 
-          <SidebarFooter>
+          <SidebarFooter className="dark:bg-black">
               <p className="text-gray-400 text-sm p-4 text-center">© 2025 Soulmates</p>
           </SidebarFooter>
       </Sidebar>

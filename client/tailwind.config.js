@@ -16,7 +16,7 @@ export default {
 			fadeIn: 'fadeIn 1s ease-out',
 			float: 'float 4s ease-in-out infinite',
 			bounce: "bounce 0.9s infinite ease-in-out",
-			pulse: "pulse 800ms ease-out",
+			pulse2: "pulse2 800ms ease-out",
 			shake: 'shake 0.3s ease-in-out',
 			"Lighten-1": "Lighten 4s ease-in",
 			"Lighten-2": "Lighten 3s ease-in",
@@ -32,7 +32,7 @@ export default {
 				'0%': { transform: 'translateY(0px) rotate(0deg)', opacity: 1 },
 				'100%': { transform: 'translateY(600px) rotate(360deg)', opacity: 0 }, 
 			   },
-			pulse:{
+			pulse2:{
 				'0%': {opacity: '0.3',transform: 'scale(0.8)' },
 				'100%': { transform: 'scale(1.5)',opacity:'0' }, 
 			   },

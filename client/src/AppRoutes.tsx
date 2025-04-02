@@ -9,6 +9,7 @@ import SubHome from './components/Main/Home';
 import Games from './components/Main/Games';
 import PrivateRoute from './util/PrivateRoute';
 import HomecomingAlert from './components/Homecoming/HomecomingAlert';
+import Game from './components/Main/Game';
 
 export const AppRoutes = () => {
   return (
@@ -26,12 +27,14 @@ export const AppRoutes = () => {
           <Route path="special" element={<HomecomingAlert />} />
         </Route>
         <Route path="/" element={<Home />}>
-          <Route index element={<SubHome />} />
-          <Route path="games" element={<Games />} />
-          <Route path="time" element={<div>time</div>} />
-          <Route path="calender" element={<div>calender</div>} />
-          <Route path="settings" element={<div>settings</div>} />
-        </Route>
+        <Route index element={<SubHome />} />
+        <Route path="games" element={<Games />} />
+        <Route path="games/this-or-that" element={<Game />} />
+        <Route path="time" element={<div>Time</div>} />
+        <Route path="calender" element={<div>Calender</div>} />
+        <Route path="settings" element={<div>Settings</div>} />
+      </Route>
+        
       </Route>
 
       <Route path="*" element={<Navigate to="/" />} />

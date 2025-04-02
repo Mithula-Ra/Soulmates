@@ -22,8 +22,8 @@ const SideBarLink: React.FC<SideBarLinkProps> = ({ Label, url = '/'}) => {
         <NavLink
             to={url}
             className={({ isActive }) =>
-                `block px-4 py-2 rounded-lg transition duration-200 my-1 ${
-                    isActive ? "bg-purple-700 text-white font-semibold" : "dark:bg-transparent bg-muted border-[0] dark:border dark:border-gray-50/20 hover:text-white hover:bg-purple-400 dark:hover:bg-muted "
+                `block px-4 py-2 rounded-lg transition duration-200 my-2 opacity-80 ${
+                    isActive ? "bg-purple-700 text-white font-semibold" : "dark:bg-gray-500 bg-muted hover:text-white hover:bg-purple-400 dark:hover:bg-muted "
                 }`}
             onClick={handleClick}
         >

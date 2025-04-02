@@ -11,7 +11,7 @@ import { UserProvider } from './contexts/UserContext'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <FirstLoginProvider>
-      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <UserProvider>
           <BrowserRouter>
             <AppRoutes />
