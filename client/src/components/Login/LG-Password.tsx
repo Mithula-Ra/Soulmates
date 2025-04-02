@@ -3,16 +3,18 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
-import React from "react";
 import Loading from "../commons/Loading";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useState } from "react";
+
 
 const Password = () => {
-  const [value, setValue] = React.useState("");  
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState("");  
+  const [value, setValue] = useState("");  
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");  
   const navigate = useNavigate();
+  const [ specialDay ] = useState(true);
 
   // Handling OTP input change
   const handleChange = async (newValue: string) => {
@@ -37,9 +39,9 @@ const Password = () => {
 
         const storedUser = localStorage.getItem("selectedUser");
         if (storedUser) {
-            navigate("/");  // Navigate to the home page if user is logged in
+            specialDay ? navigate("/Homecoming/special") :  navigate("/"); 
         } else {
-            navigate("/login/user");  // Navigate to the login page if no user
+            specialDay ? navigate("/Homecoming/special") : navigate("/login/user"); 
         }
       } catch (err: any) {
         setError("Wrong Passcode");

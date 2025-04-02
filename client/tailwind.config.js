@@ -18,6 +18,8 @@ export default {
 			bounce: "bounce 0.9s infinite ease-in-out",
 			pulse: "pulse 800ms ease-out",
 			shake: 'shake 0.3s ease-in-out',
+			"Lighten-1": "Lighten 4s ease-in",
+			"Lighten-2": "Lighten 3s ease-in",
 		},
 		keyframes: {
 			float:{
@@ -48,6 +50,10 @@ export default {
 			   meteor: {
 				'10%' : { opacity: '1' },
 				'80%' : { left: '10%', top: '90px', opacity: '0' }
+			  },
+			  Lighten: {
+				'10%' : { opacity: '1' },
+				'80%' : { opacity: '0.2' }
 			  }
 		},
   		colors: {

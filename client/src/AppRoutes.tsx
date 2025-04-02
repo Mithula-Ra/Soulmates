@@ -8,6 +8,7 @@ import ChooseUser from './components/Login/LG-ChooseUser';
 import SubHome from './components/Main/Home';
 import Games from './components/Main/Games';
 import PrivateRoute from './util/PrivateRoute';
+import HomecomingAlert from './components/Homecoming/HomecomingAlert';
 
 export const AppRoutes = () => {
   return (
@@ -20,7 +21,10 @@ export const AppRoutes = () => {
       </Route>
 
       <Route element={<PrivateRoute />}>
-        <Route path="/Homecoming" element={<Homecoming><HCMain /></Homecoming>} />
+        <Route path="/Homecoming" element={<Homecoming />} >
+          <Route index element={<HCMain />} />
+          <Route path="special" element={<HomecomingAlert />} />
+        </Route>
         <Route path="/" element={<Home />}>
           <Route index element={<SubHome />} />
           <Route path="games" element={<Games />} />
