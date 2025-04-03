@@ -10,6 +10,9 @@ import Games from './components/Main/Games';
 import PrivateRoute from './util/PrivateRoute';
 import HomecomingAlert from './components/Homecoming/HomecomingAlert';
 import Game from './components/Main/Game';
+import HomecomingGifts from './components/Homecoming/HomecomingGifts';
+import GiftsRania1 from './components/Homecoming/GiftsRania1';
+import GiftsRania2 from './components/Homecoming/GiftsRania2';
 
 export const AppRoutes = () => {
   return (
@@ -25,6 +28,10 @@ export const AppRoutes = () => {
         <Route path="/Homecoming" element={<Homecoming />} >
           <Route index element={<HCMain />} />
           <Route path="special" element={<HomecomingAlert />} />
+        </Route>
+        <Route path="gifts" element={<HomecomingGifts />} >
+          <Route index element={<GiftsRania1 />} />
+          <Route path="look" element={<GiftsRania2 />} />
         </Route>
         <Route path="/" element={<Home />}>
         <Route index element={<SubHome />} />

@@ -1,45 +1,34 @@
-import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SelectUser from "./HC-SelectUser";
 import Day from "./HC-Day";
 import Flowers from "./Flowers";
+import { useUser } from "@/contexts/UserContext";
 
-type User = {
+type  User = {
   id: number;
-  name: string;
-  profilePic: string
+  name: string;  
+  secondName: string;
+  initials: string;
 };
 
-const users: User[] = [
-  { id: 1, name: "Mithula", profilePic: "Mithula-HC.JPG"},
-  { id: 2, name: "Rania", profilePic: "Rania-HC.JPG"}
-];
 
 const Main: React.FC = () => {
-  const [selectedUser, setSelectedUser] = useState<User | null>(null);
-  // const [error, setError] = useState<string>("");
+  const { users, setUser } = useUser();
+  const navigate = useNavigate();
+
 
   const handleUserSelect = (user: User) => {
-    setSelectedUser(user);
-    // setError(""); // Ensure setError is defined
+    setUser(user);
+    navigate("/gifts")
   };
 
   return (
     <div>
-      {!selectedUser ? (
         <div className="flex flex-col gap-4">
           <Day />
           <SelectUser users={users} handleUserSelect={handleUserSelect} />
           <Flowers imageSrc="/Homecoming/rose.webp"></Flowers>
-        </div>
-      ) : (
-        <div className="h-full w-full">
-          <h2>Hello, {selectedUser.name}!</h2>
-          <div>
-            <img src="/Homecoming/1234.png" className="w-[350px] h-full object-cover " alt="" />
-          </div>
-        </div>
-        
-      )}
+        </div>  
     </div>
   );
 };

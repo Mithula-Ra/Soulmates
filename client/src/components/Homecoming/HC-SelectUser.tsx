@@ -1,9 +1,10 @@
 import UserCard from "./HC-UserCard";
 
 type User = {
-    id: number;
-    name: string;
-    profilePic: string;
+  id: number;
+  name: string;  
+  secondName: string;
+  initials: string;
   };
   
   type Props = {

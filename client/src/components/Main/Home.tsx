@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Hero from "./Hero";
 import Couple from "./HM-Couple";
 
@@ -7,6 +8,7 @@ const Home = () => {
         <Hero url="/SideBar/home.webp" title="Home" subTitle="This is the Home"></Hero>
         <div className="flex flex-row gap-4 my-4 h-fit">
             <Couple></Couple>
+            <Link to={"/homecoming"}>Homecoming</Link>
         </div>
         
       </div>
