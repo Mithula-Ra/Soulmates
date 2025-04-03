@@ -14,8 +14,10 @@ export default {
 		},
 		animation: {
 			fadeIn: 'fadeIn 1s ease-out',
+			fadeOut: 'fadeOut 10s ease-out',
 			fadeInandOut: 'fadeInandOut ease-in-out',
 			float: 'float 4s ease-in-out infinite',
+			float2: 'float2 4s ease-in-out infinite',
 			bounce: "bounce 0.9s infinite ease-in-out",
 			star1: "star1 1s ease-in-out infinite",			
 			star2: "star2 2s ease-in-out infinite",			
@@ -31,6 +33,11 @@ export default {
 			 '50%': { transform: 'translateY(0px)' }, 
 			 '100%': { transform: 'translateY(6px)' }, 
 			},
+			float2:{
+				'0%': { transform: 'translateY(10px)' },
+				'50%': { transform: 'translateY(0px)' }, 
+				'100%': { transform: 'translateY(10px)' }, 
+			   },
 			falling:{
 				'0%': { transform: 'translateY(0px) rotate(0deg)', opacity: 1 },
 				'100%': { transform: 'translateY(600px) rotate(360deg)', opacity: 0 }, 
@@ -43,6 +50,10 @@ export default {
 			  '0%': { opacity: '0', transform: 'translateY(50px)' },
           	'100%': { opacity: '1', transform: 'translateY(0)' }, 
 			},
+			fadeOut: {
+				'0%': { opacity: '1' },
+				'100%': { opacity: '0' }, 
+			  },
 			fadeInandOut: {
 				'0%': {  opacity: '0', transform: 'translateY(50px)' },
 				'25%': { opacity: '1', transform: 'translateY(0)' }, 

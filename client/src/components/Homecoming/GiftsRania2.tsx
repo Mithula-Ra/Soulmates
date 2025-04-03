@@ -2,23 +2,30 @@ import { Link } from "react-router-dom";
 import Message from "./Message";
 import { Button } from "../ui/button";
 
+
 const GiftsRania2 = () => {
 
   return (
     <div className="relative flex h-screen w-screen flex-col items-center justify-center p-6 md:p-10">
       {/* Background Image */}
       <img 
-        src="/Homecoming/Gift-bg.webp" 
+        src="/Homecoming/mirror.webp" 
         alt="Gifts for you" 
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover z-10 animate-fadeIn"
+      />
+       <img 
+        src="/Homecoming/re.webp" 
+        alt="Gifts for you" 
+        className="absolute opacity-0 inset-0 w-full h-full object-cover z-20 animate-fadeOut delay-200"
       />
       
       {/* Foreground Content */}
-      <div className="relative z-10 text-white text-xl h-screen flex items-center justify-center">
+      <div className="relative z-30 text-white text-xl h-screen flex items-center justify-center">
       <Link className="z-50" to={"/"}><Button>Look</Button></Link>
+  
   <div
     className="absolute opacity-0 animate-fadeInandOut"
-    style={{ animationDuration: "8s", animationDelay: "1s" }}
+    style={{ animationDuration: "8s", animationDelay: "12s" }}
   >
     <Message title="Raniaa 😍😍" userID={1}>
       <div className="flex flex-col text-lg gap-3">
@@ -30,7 +37,7 @@ const GiftsRania2 = () => {
 
   <div
     className="absolute opacity-0 animate-fadeInandOut"
-    style={{ animationDuration: "8s", animationDelay: "10s" }}
+    style={{ animationDuration: "8s", animationDelay: "21s" }}
   >
     <Message title="Look at you ah💕💕" userID={1}>
       <div className="flex flex-col text-lg gap-3">
@@ -42,7 +49,7 @@ const GiftsRania2 = () => {
 
   <div
     className="absolute opacity-0 animate-fadeInandOut"
-    style={{ animationDuration: "8s", animationDelay: "19s" }}
+    style={{ animationDuration: "8s", animationDelay: "30s" }}
   >
     <Message title="Soo Pretty 💕🥺" userID={1}>
       <div className="flex flex-col text-lg gap-3">
@@ -55,7 +62,7 @@ const GiftsRania2 = () => {
 
   <div
     className="absolute opacity-0 animate-fadeInandOut"
-    style={{ animationDuration: "8s", animationDelay: "28s" }}
+    style={{ animationDuration: "8s", animationDelay: "39s" }}
   >
     <Message title="You know🥺💕💕.." userID={1}>
       <div className="flex flex-col text-lg gap-3">
@@ -67,7 +74,7 @@ const GiftsRania2 = () => {
 
   <div
     className="absolute opacity-0 animate-fadeInandOut"
-    style={{ animationDuration: "8s", animationDelay: "37s" }}
+    style={{ animationDuration: "8s", animationDelay: "48s" }}
   >
     <Message title="Because of you Rania.." userID={1}>
       <div className="flex flex-col text-lg gap-3">
@@ -80,7 +87,7 @@ const GiftsRania2 = () => {
 
 <div
     className="absolute opacity-0 animate-fadeInandOut"
-    style={{ animationDuration: "8s", animationDelay: "46s" }}
+    style={{ animationDuration: "8s", animationDelay: "57s" }}
   >
     <Message title="My Happiness.." userID={1}>
       <div className="flex flex-col text-lg gap-3">
@@ -88,6 +95,30 @@ const GiftsRania2 = () => {
         <span>My Future 💘</span>
       </div>
     </Message>
+
+    <div
+    className="absolute opacity-0 animate-fadeInandOut"
+    style={{ animationDuration: "8s", animationDelay: "66s" }}
+  >
+    <Message title="So baby.." userID={1}>
+      <div className="flex flex-col text-lg gap-3">
+        <span>So Baby 🥺💖</span>
+        <span>Will you stay by my side until infinity?..</span>
+      </div>
+    </Message>
+    </div>
+
+    <div
+    className="absolute opacity-0 animate-fadeInandOut"
+    style={{ animationDuration: "8s", animationDelay: "75s" }}
+  >
+    <Message title="So baby.." userID={1}>
+      <div className="flex flex-col text-lg gap-3">
+        <span>Will you be mine Rania?..</span>        
+        <span>And mine alone 💞?..</span>
+      </div>
+    </Message>
+    </div>
     
     
   </div>

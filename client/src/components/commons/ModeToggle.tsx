@@ -5,7 +5,6 @@ import { useTheme } from "@/contexts/Themeprovider"
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();  
 
-  // Toggle between light and dark modes
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark")
   }

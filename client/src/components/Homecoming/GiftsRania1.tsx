@@ -8,14 +8,26 @@ import {
     AlertDialogTrigger,
   } from "@/components/ui/alert-dialog";
   import { Button } from "../ui/button";
-  import { useState } from "react";
+  import { useEffect, useState } from "react";
 import Flowers from "./Flowers";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
   
   const GiftsRania1 = () => {
-    const [firstGiftClaimed] = useState(true);
-  const [secondGiftClaimed] = useState(false);
-  const [thirdGiftClaimed] = useState(false);
+    const [firstGiftClaimed ,setFrstGiftClaimed] = useState(false);
+    const [secondGiftClaimed, setSecondGiftClaimed] = useState(false);
+    const [thirdGiftClaimed, setThirdGiftClaimed] = useState(false);
+    const navigate = useNavigate();
+
+    const handleClaim = (setClaim: React.Dispatch<React.SetStateAction<boolean>>) => {
+        setClaim(true);        
+    };
+
+    useEffect(() => {
+        if (firstGiftClaimed && secondGiftClaimed && thirdGiftClaimed) {
+            navigate("/gifts/mirror");
+        }
+    }, [firstGiftClaimed, secondGiftClaimed, thirdGiftClaimed]); // Runs when any of these values change
+    
 
     return (
       <div className="relative flex h-screen w-screen flex-col items-center justify-center p-6 md:p-10">
@@ -27,7 +39,7 @@ import { Link } from "react-router-dom";
         />
   
         {/* Foreground Content */}
-        <div className="relative z-10 w-full h-full">
+        <div className="relative z-10 w-full h-full flex flex-col justify-end">
           {/* First Gift */}
           <AlertDialog>
             <AlertDialogTrigger>
@@ -46,7 +58,7 @@ import { Link } from "react-router-dom";
               </div>
               <AlertDialogFooter className="mt-6">
                 <AlertDialogAction>
-                  <Button variant={"ghost"} className="w-full h-full z-50 font-semibold">Wear it 🥰 </Button>
+                  <Button onClick={() => handleClaim(setFrstGiftClaimed)} variant={"ghost"} className="w-full h-full z-50 font-semibold"> {secondGiftClaimed && thirdGiftClaimed ? 'See in mirror 😍' : 'Wear it 😍'}</Button>
                 </AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>
@@ -60,15 +72,16 @@ import { Link } from "react-router-dom";
             <AlertDialogContent className="min-h-[450px]  max-w-[300px] bg-transparent border-none">
               <AlertDialogHeader>
                 <AlertDialogTitle className="mb-6  text-white/80 text-sm">
-                  Time for the second one! 🥳
-                </AlertDialogTitle>
+                There’s no flower in this world that doesn’t call you their Queen Baby 🥰</AlertDialogTitle>
               </AlertDialogHeader>
               <div className="max-w-[300px] h-fit">
-              <Flowers></Flowers>
+                <img src="/Homecoming/g2.webp" alt="Gift for my love" className="object-cover w-full rounded-lg h-fit "/>
+                <Flowers></Flowers>
+                
               </div>
               <AlertDialogFooter className="mt-6">
                 <AlertDialogAction>
-                <Button variant={"ghost"} className="w-full h-full z-50 font-semibold">Wear it 🥰 </Button>
+                <Button onClick={() => handleClaim(setSecondGiftClaimed)} variant={"ghost"} className="w-full h-full z-50 font-semibold">{firstGiftClaimed && thirdGiftClaimed ? 'See in mirror 😍' : 'Wear it 😍'}</Button>
                 </AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>
@@ -82,20 +95,25 @@ import { Link } from "react-router-dom";
             <AlertDialogContent className="min-h-[450px] max-w-[300px] bg-transparent border-none">
               <AlertDialogHeader>
                 <AlertDialogTitle className="mb-6 text-white/80 text-sm">
-                  And here's the final one! 🎁
+                And you're my queen more than anything love 🥺❤️
                 </AlertDialogTitle>
               </AlertDialogHeader>
               <div className="max-w-[300px] h-fit">
-              <Flowers></Flowers>
+                <img src="/Homecoming/g3.webp" alt="Gift for my love" className="object-cover w-full rounded-lg h-fit "/>
+                <Flowers></Flowers>
+                
               </div>
               <AlertDialogFooter className="mt-6">
                 <AlertDialogAction>
-                <Button variant={"ghost"} className="w-full h-full z-50 font-semibold">Wear it 🥰 </Button>
+                <Button onClick={() => handleClaim(setThirdGiftClaimed)} variant={"ghost"} className="w-full h-full z-50 font-semibold">{secondGiftClaimed && firstGiftClaimed ? 'See in mirror 😍' : 'Wear it 😍'} </Button>
                 </AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
-          <Link to={"/gifts/look"}><Button>Look</Button></Link>
+          <div className="w-full flex flex-col gap-4 justify-start mb-16 items-center">
+            <span className="max-w-[260px] font-semibold text-white">Are you ready Baby? 🥰</span>
+            <span className="max-w-[260px] font-semibold text-purple-500 text-sm">You can click and see your gifts now 😍</span>
+         </div>
         </div>
       </div>
     );
@@ -120,7 +138,7 @@ import { Link } from "react-router-dom";
   const Gift: React.FC<GiftProps> = ({ top, left, claimed, id }) => {
     return (
       <div
-        className="absolute w-[180px] h-[180px] animate-float"
+        className="absolute w-[180px] h-[180px] animate-float2"
         style={{ top: `${top}px`, left: `${left}px` }}
       >
         {/* Default Gift Image */}
@@ -153,4 +171,5 @@ import { Link } from "react-router-dom";
     );
   };
 
-  
+
+

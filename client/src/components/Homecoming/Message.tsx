@@ -14,9 +14,9 @@ const Message: React.FC<ContainerProps> = ({ title, children, userID }) => {
 
 
   return (
-    <div className="w-[80vw] md:w-[300px] max-w-lg min-h-[50px] flex flex-col justify-start items-start bg-white/20 rounded-lg shadow-md z-20">
+    <div className="w-[80vw] md:w-[300px] max-w-lg min-h-[50px] flex flex-col justify-start items-start bg-white/30 rounded-lg shadow-md z-20">
       {/* Title Bar */}
-      <div className="h-[50px] w-full bg-white/30 flex flex-row gap-4 justify-start items-center px-4 text-gray-800 rounded-t-lg">
+      <div className="h-[50px] w-full bg-white/40 flex flex-row gap-4 justify-start items-center px-4 text-gray-800 rounded-t-lg">
        <Avatar className="opacity-80">
         <AvatarImage src={`/Profile/${user && userID === 1? users[0].id : users[1].id}.webp`} />
         <AvatarFallback>{user && userID === 1? users[0].initials : users[1].initials}</AvatarFallback>
