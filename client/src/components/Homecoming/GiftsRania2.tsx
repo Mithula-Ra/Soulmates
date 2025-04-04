@@ -21,7 +21,7 @@ const GiftsRania2 = () => {
       
       {/* Foreground Content */}
       <div className="relative z-30 text-white text-xl h-screen flex items-center justify-center">
-      <Link className="z-50" to={"/"}><Button>Look</Button></Link>
+      
   
   <div
     className="absolute opacity-0 animate-fadeInandOut"
@@ -83,7 +83,7 @@ const GiftsRania2 = () => {
       </div>
     </Message>
   </div>
-</div>
+
 
 <div
     className="absolute opacity-0 animate-fadeInandOut"
@@ -95,6 +95,8 @@ const GiftsRania2 = () => {
         <span>My Future 💘</span>
       </div>
     </Message>
+
+    </div>
 
     <div
     className="absolute opacity-0 animate-fadeInandOut"
@@ -119,7 +121,27 @@ const GiftsRania2 = () => {
       </div>
     </Message>
     </div>
-    
+
+    <div
+    className="absolute opacity-0 animate-fadeInandOut"
+    style={{ animationDuration: "7s", animationDelay: "84s" }}
+  >
+    <Message title="will you.." userID={1}>
+      <div className="flex flex-col text-lg gap-3">
+        <span>Will you be My wife Rania 💓?..</span> 
+      </div>
+    </Message>
+    </div>
+   
+
+    <div
+    className="absolute opacity-0 animate-fadeIn"
+    style={{ animationDuration: "20s", animationDelay: "92s" }}
+  >
+      <Button >
+      <Link  className="z-50 w-full bg-purple-300 rounded-lg" to={"/"}><Button>I Do 🥺💓</Button></Link>
+      </Button>      
+    </div>
     
   </div>
  

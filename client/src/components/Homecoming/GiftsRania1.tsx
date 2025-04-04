@@ -51,7 +51,7 @@ import { useNavigate } from "react-router-dom";
                   You Look soooo Beautiful in white Rania 🤍
                 </AlertDialogTitle>
               </AlertDialogHeader>
-              <div className="max-w-[300px] h-fit">
+              <div className="max-w-[300px] h-fit animate-float">
                 <img src="/Homecoming/g1.webp" alt="Gift for my love" className="object-cover w-full rounded-lg h-fit "/>
                 <Flowers></Flowers>
                 
@@ -74,7 +74,7 @@ import { useNavigate } from "react-router-dom";
                 <AlertDialogTitle className="mb-6  text-white/80 text-sm">
                 There’s no flower in this world that doesn’t call you their Queen Baby 🥰</AlertDialogTitle>
               </AlertDialogHeader>
-              <div className="max-w-[300px] h-fit">
+              <div className="max-w-[300px] h-fit animate-float">
                 <img src="/Homecoming/g2.webp" alt="Gift for my love" className="object-cover w-full rounded-lg h-fit "/>
                 <Flowers></Flowers>
                 
@@ -98,7 +98,7 @@ import { useNavigate } from "react-router-dom";
                 And you're my queen more than anything love 🥺❤️
                 </AlertDialogTitle>
               </AlertDialogHeader>
-              <div className="max-w-[300px] h-fit">
+              <div className="max-w-[300px] h-fit animate-float">
                 <img src="/Homecoming/g3.webp" alt="Gift for my love" className="object-cover w-full rounded-lg h-fit "/>
                 <Flowers></Flowers>
                 
